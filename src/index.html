@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Main</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>" />
+  </head>
+  <body>
+    Hello, I am main page!
+    <picture>
+      <source media="(max-width: 400px)" srcset="<%= require('./images/faceoff_cage-small.jpg') %>" />
+      <source media="(max-width: 800px)" srcset="<%= require('./images/faceoff_cage-medium.jpg') %>" />
+      <img class="author__image" src="<%= require('./images/faceoff_cage.jpg') %>" alt="Аватар пользователя" />
+    </picture>
+    <div class="header" class="header">
+      HEADER
+    </div>
+    <a href="./secondary">to second page</a>
+    <%=require('html-loader!./templates/footer.html')%>
+  </body>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+
+</html>

@@ -1,0 +1,7 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+body, html {
+	background: green;
+	background-image: url('../images/kingpin.jpg');
+}
