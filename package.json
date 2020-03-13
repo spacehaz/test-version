@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production&rimraf dist && webpack --mode production",
-    "dev": "cross-env ENV=development&webpack-dev-server --mode development --watch"
+    "dev": "cross-env ENV=development&webpack-dev-server --mode development --watch",
+    "pages": "gh-pages -d dist"
   },
   "license": "ISC",
   "devDependencies": {
